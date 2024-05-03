@@ -4,15 +4,6 @@ import sys
 import threading
 import time
 
-# Function to print spinning widget
-def print_spinner():
-    spinning_chars = itertools.cycle(['-', '/', '|', '\\'])
-    for _ in range(sys.maxsize):  # You can adjust the range or set it to a higher number
-        sys.stdout.write(next(spinning_chars))
-        sys.stdout.flush()
-        sys.stdout.write('\b')
-        time.sleep(0.1)
-
 class CBS:
 
     def __init__(self, url:str):
@@ -40,7 +31,7 @@ class CBS:
         data_list = []
 
         while True:
-
+            # Volgens de API documentatie mag je maximaal 10000 records ophalen per API call
             window:str = f"?$top={top}&$skip={skip}"
             data = self.fetch(url+window)
 
