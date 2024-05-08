@@ -22,7 +22,7 @@ gasvebruik = {
     6:2100
 }
 
-def process_city(city_name):
+def process_city(city_name:str) -> None:
     for huis_type in ['buy', 'rent']:
         clear_output(wait=True)
         if '(' in city_name:
@@ -51,7 +51,7 @@ def process_city(city_name):
                 else:
                     onderwaarde, bovenwaarde = key
                     stroom_verbruik = np.random.randint(onderwaarde, bovenwaarde)
-                    df.at[index, 'kwh_stroomvebruik_per_jaar'] = stroom_verbruik * row['living_area']
+                    df.at[index, 'kwh_stroomvebruik_per_jaar'] = (stroom_verbruik * row['living_area']) // 10
 
                 # Bereken het gasverbruik op basis van het aantal slaapkamers (proxy voor aantal personen in de desbetreffende woning)
                 key = gasvebruik.get(row['bedroom'])
