@@ -76,7 +76,7 @@ class CBS:
 
             output_dict[data_source] = df
         print('\n')
-        [print(f'Retrieve {x} by using: your_output_variable["{x}"]') for x in data_sources]
+        [print(f'Retrieve {x} by using: output["{x}"]') for x in data_sources]
 
         return output_dict
 
