@@ -64,7 +64,7 @@ def process_city(city_name:str) -> None:
                     df.at[index, 'm3_gasverbruik_per_jaar'] = gas_verbruik_random
             #sla de data op onder het mapje steden
             try:
-                df.to_csv(f'steden/{huis_type}_{city_name}.csv', index=False, sep=';')
+                df.to_csv(f'huizen/{huis_type}_{city_name}.csv', index=False, sep=';')
             except Exception as e:
                 raise e
         # log als iets verkeerd gaat
