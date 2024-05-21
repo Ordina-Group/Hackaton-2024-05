@@ -2,4 +2,5 @@
 .env
 *.py
 *.ipynb
+!script_voor_laden_huizen.ipynb
 __pycache__/
