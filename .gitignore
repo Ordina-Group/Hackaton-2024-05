@@ -2,6 +2,7 @@
 .env
 *.py
 *.ipynb
+!steden.txt
 !script_voor_laden_huizen.ipynb
 !city_data_retrieval.py
 __pycache__/
