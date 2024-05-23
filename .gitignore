@@ -3,5 +3,5 @@
 *.py
 *.ipynb
 !script_voor_laden_huizen.ipynb
-!city_data_retrieval.ipynb
+!city_data_retrieval.py
 __pycache__/
